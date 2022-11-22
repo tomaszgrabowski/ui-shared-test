@@ -7,7 +7,7 @@
   "types": "./dist/esm/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gapon2401/my-react-typescript-package.git"
+    "url": "git+https://github.com/tomaszgrabowski/ui-shared-test.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
