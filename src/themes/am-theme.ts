@@ -1,6 +1,6 @@
-import {ITheme} from "./theme.interface";
+import {DefaultTheme} from "styled-components";
 
-export const AmTheme: ITheme = {
+export const AmTheme: DefaultTheme = {
     name: 'am',
     colors: {
         primary: "#593487",
@@ -11,7 +11,7 @@ export const AmTheme: ITheme = {
         secondaryText: "#fff",
     },
     fontSizes: {large: "24", medium: "18", small: "14"},
-    fonts: {primary: "Lato", secondary: "Lobster"},
+    fonts: {primary: "Arial", secondary: "Verdana"},
     lineHeights: {large: "24", medium: "18", small: "14"}
 
 }

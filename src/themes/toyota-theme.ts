@@ -1,6 +1,6 @@
-import {ITheme} from "./theme.interface";
+import {DefaultTheme} from "styled-components";
 
-export const ToyotaTheme: ITheme = {
+export const ToyotaTheme: DefaultTheme = {
     name: 'toyota',
     colors: {
         primary: "#ec961c",
@@ -11,7 +11,6 @@ export const ToyotaTheme: ITheme = {
         secondaryText: "#333",
     },
     fontSizes: {large: "24", medium: "18", small: "14"},
-    fonts: {primary: "Lato", secondary: "Lobster"},
+    fonts: {primary: "Verdana", secondary: "Arial"},
     lineHeights: {large: "24", medium: "18", small: "14"}
-
 }

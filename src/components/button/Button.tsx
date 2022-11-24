@@ -52,7 +52,7 @@ export const Wrapper = styled.button<{
     size?: 'small' | 'medium' | 'large';
     children: React.ReactNode;
 }>`
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: ${props=>props.theme.fonts.primary};
   font-weight: 700;
   border: 0;
   border-radius: 3em;
