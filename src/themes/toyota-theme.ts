@@ -1,0 +1,17 @@
+import {ITheme} from "./theme.interface";
+
+export const ToyotaTheme: ITheme = {
+    name: 'toyota',
+    colors: {
+        primary: "#ec961c",
+        primaryBackground: "#333",
+        primaryText: "#fff",
+        secondary: "#888",
+        secondaryBackground: "#f0f0f0",
+        secondaryText: "#333",
+    },
+    fontSizes: {large: "24", medium: "18", small: "14"},
+    fonts: {primary: "Lato", secondary: "Lobster"},
+    lineHeights: {large: "24", medium: "18", small: "14"}
+
+}

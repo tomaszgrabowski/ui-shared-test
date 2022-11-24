@@ -1,5 +1,4 @@
-/// <reference types="react" />
-import './button.css';
+import React, { FC } from 'react';
 export interface ButtonProps {
     /**
      * Is this the principal call to action on the page?
@@ -20,9 +19,14 @@ export interface ButtonProps {
     /**
      * Optional click handler
      */
-    onClick?: () => void;
+    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 /**
  * Primary UI component for user interaction
  */
-export declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonProps) => JSX.Element;
+export declare const Button: FC<ButtonProps>;
+export declare const Wrapper: import("styled-components").StyledComponent<"button", any, {
+    primary?: boolean | undefined;
+    size?: "small" | "medium" | "large" | undefined;
+    children: React.ReactNode;
+}, never>;

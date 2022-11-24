@@ -1,5 +1,5 @@
-import React from 'react';
-import './button.css';
+import React, {FC} from 'react';
+import styled from "styled-components";
 
 export interface ButtonProps {
   /**
@@ -21,28 +21,60 @@ export interface ButtonProps {
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  primary = false,
-  size = 'medium',
+export const Button: FC<ButtonProps> = ({
+  primary,
   backgroundColor,
-  label,
-  ...props
+    label,
+    onClick,
+    size = 'medium',
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
-    <button
+    <Wrapper
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={{ backgroundColor }}
-      {...props}
+      onClick={onClick}
+      primary={primary}
+      size={size}
     >
       {label}
-    </button>
+    </Wrapper>
   );
 };
+
+export const Wrapper = styled.button<{
+    primary?: boolean;
+    size?: 'small' | 'medium' | 'large';
+    children: React.ReactNode;
+}>`
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  ${(props) => props.primary ? `
+    color: ${props.theme.colors.primaryText};
+    background-color: ${props.theme.colors.primaryBackground};
+  ` : `
+    color: ${props.theme.colors.secondaryText};
+    background-color: ${props.theme.colors.secondaryBackground};
+  `}
+  ${(props: { size?: string; }) => props.size === 'small' ? `
+  font-size: 12px;
+  padding: 10px 16px;
+  ` : props.size === 'medium' ? `
+  font-size: 14px;
+  padding: 11px 20px;
+  ` : `
+  font-size: 16px;
+  padding: 12px 24px;
+  `}
+`;
+
