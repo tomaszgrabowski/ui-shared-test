@@ -1,2 +1,2 @@
-import { ITheme } from "./theme.interface";
-export declare const AmTheme: ITheme;
+import { DefaultTheme } from "styled-components";
+export declare const ToyotaTheme: DefaultTheme;

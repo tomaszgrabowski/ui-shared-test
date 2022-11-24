@@ -25,7 +25,7 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export declare const Button: FC<ButtonProps>;
-export declare const Wrapper: import("styled-components").StyledComponent<"button", any, {
+export declare const Wrapper: import("styled-components").StyledComponent<"button", import("styled-components").DefaultTheme, {
     primary?: boolean | undefined;
     size?: "small" | "medium" | "large" | undefined;
     children: React.ReactNode;

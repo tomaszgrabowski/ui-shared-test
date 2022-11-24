@@ -2,16 +2,17 @@
 exports.__esModule = true;
 exports.AmTheme = void 0;
 exports.AmTheme = {
+    name: 'am',
     colors: {
         primary: "#593487",
-        primaryBackground: "#333",
-        primaryText: "#565656",
-        secondary: "#c00",
-        secondaryBackground: "#f0f0f0",
-        secondaryText: "#333"
+        primaryBackground: "#593487",
+        primaryText: "#fff",
+        secondary: "#c03322",
+        secondaryBackground: "#c00",
+        secondaryText: "#fff"
     },
     fontSizes: { large: "24", medium: "18", small: "14" },
-    fonts: { primary: "Lato", secondary: "Lobster" },
+    fonts: { primary: "Arial", secondary: "Verdana" },
     lineHeights: { large: "24", medium: "18", small: "14" }
 };
 //# sourceMappingURL=am-theme.js.map
